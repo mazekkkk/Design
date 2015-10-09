@@ -8,8 +8,8 @@ package cn.mazekkkk.designpatterns.factory.faService;
  */
 public interface Human {
 
-    public void getColor();
+    void getColor();
 
-    public void toSay();
+    void toSay();
 
 }

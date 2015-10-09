@@ -16,6 +16,7 @@ import java.util.Properties;
  */
 public class NvWaClient {
     public static void main(String[] args){
+        String basePath = "/Users/mazekkkk/Design/Design/src/Resource/Factory.properties";
 
         Properties properties = new Properties();
         //对象实例
@@ -24,7 +25,8 @@ public class NvWaClient {
         Class<Human> yellowMan = null;
         //拼接路径拿到配置文件
         try{
-            InputStream inputStream = new FileInputStream("Design"+File.separator+"src"+File.separator+"Resource"+File.separator+"Factory.properties");
+            InputStream inputStream = new FileInputStream(basePath.replace("/",File.separator));
+//            InputStream inputStream = new FileInputStream("classes"+File.separator+"Factory.properties");
             //载入配置文件
             properties.load(inputStream);
             //通过key获取权限定类名
